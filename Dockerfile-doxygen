@@ -9,6 +9,6 @@ WORKDIR /abc
 
 RUN doxygen doc/Doxyfile
 
-FROM nginx:alpine
+FROM nginx:1.23.1-alpine
 
 COPY --from=0 /abc/doc/doxygen/html /usr/share/nginx/html
